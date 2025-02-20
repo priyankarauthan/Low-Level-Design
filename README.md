@@ -1,7 +1,7 @@
 # Low-Level-Design
 
 # LRU Cache
-
+```
 class LRUCache<K,V>
 {
    private final int capacity;
@@ -69,7 +69,7 @@ class LRUCache<K,V>
      node.next.previous = node.previous;
      }
     
-  
+ ``` 
 
 
   
