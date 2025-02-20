@@ -61,7 +61,7 @@ class LRUCache<K,V>
     head.next = node;
     node.previous = head;
     node.next = n1;
-    n1.revious = node;    
+    n1.previous = node;    
   }
 
   public void removeFromNode(Node node){
