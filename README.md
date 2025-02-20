@@ -20,10 +20,10 @@ class LRUCache<K,V>
   } 
   public LRUCache(int initalCapacity)
   {
-    this.capacity = capacity;
+    this.initalCapacity = initalCapacity;
     this.cache = new HashMap<>(capacity);
     this.head = new Node<>(null,null);
-    this.tail = new Node<>(null,nul);
+    this.tail = new Node<>(null,null);
     head.next = tail;
     tail.previous = head;
   }
@@ -47,7 +47,7 @@ class LRUCache<K,V>
       }
       else{
       Node newNode = new Node(key,value);
-      cache.put(key,node);
+      cache.put(key,newNode);
       addToHead(newNode);
       if(cache.size()>capacity){
       removeFromNode(tail.previous);
